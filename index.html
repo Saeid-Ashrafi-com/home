@@ -53,6 +53,9 @@
             padding: 20px 0;
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .header-content {
@@ -674,7 +677,7 @@
             transform: translateY(0);
         }
 
-        /* Responsive Styles */
+        /* Responsive Styles - بهبود بخش موبایل */
         @media (max-width: 1200px) {
             .specialties-grid {
                 grid-template-columns: 1fr;
@@ -718,6 +721,16 @@
                 width: 300px;
                 height: auto;
             }
+            
+            .hero {
+                min-height: 800px;
+                height: auto;
+                padding: 100px 0;
+            }
+            
+            .hero h2 {
+                font-size: 2.8rem;
+            }
         }
 
         @media (max-width: 768px) {
@@ -732,6 +745,7 @@
                 padding: 20px;
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
                 border-top: 1px solid rgba(0, 0, 0, 0.05);
+                z-index: 1000;
             }
             
             nav ul.active {
@@ -744,33 +758,92 @@
             
             .mobile-menu {
                 display: block;
+                z-index: 1001;
             }
             
             .hero h2 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
             }
             
             .section-title h2 {
                 font-size: 2.2rem;
             }
             
+            .section-title p {
+                font-size: 1rem;
+            }
+            
             .about-images {
                 grid-template-columns: 1fr;
+            }
+            
+            .image-card {
+                height: 250px;
             }
             
             .lawyer-photo {
                 width: 280px;
                 height: auto;
             }
+            
+            .specialty-card {
+                padding: 25px;
+            }
+            
+            .specialty-card h3 {
+                font-size: 1.6rem;
+            }
+            
+            .contact-form {
+                padding: 25px;
+            }
+            
+            .hero {
+                min-height: 700px;
+                padding: 80px 0;
+            }
+            
+            .about, .specialties, .contact {
+                padding: 80px 0;
+            }
+            
+            .btn {
+                padding: 12px 30px;
+                font-size: 0.95rem;
+            }
+            
+            .header-content {
+                flex-wrap: wrap;
+            }
+            
+            .logo h1 {
+                font-size: 1.5rem;
+            }
+            
+            .logo span {
+                font-size: 0.75rem;
+            }
         }
 
         @media (max-width: 576px) {
             .hero h2 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
             }
             
             .section-title h2 {
                 font-size: 1.8rem;
+            }
+            
+            .section-title p {
+                font-size: 0.9rem;
             }
             
             .specialties-grid {
@@ -778,12 +851,99 @@
             }
             
             .specialty-card {
-                padding: 25px;
+                padding: 20px;
+            }
+            
+            .specialty-card h3 {
+                font-size: 1.4rem;
             }
             
             .lawyer-photo {
                 width: 250px;
                 height: auto;
+            }
+            
+            .about-text h3 {
+                font-size: 1.6rem;
+            }
+            
+            .about-text p, .contact-info p {
+                font-size: 1rem;
+            }
+            
+            .contact-info h3 {
+                font-size: 1.6rem;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .contact-item i {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+            
+            .contact-item span {
+                font-size: 0.95rem;
+            }
+            
+            .hero {
+                min-height: 600px;
+                padding: 60px 0;
+            }
+            
+            .about, .specialties, .contact {
+                padding: 60px 0;
+            }
+            
+            .footer-logo {
+                font-size: 1.8rem;
+            }
+            
+            .footer-info p {
+                font-size: 0.9rem;
+            }
+            
+            .container {
+                width: 95%;
+                padding: 0 15px;
+            }
+            
+            .section-title {
+                margin-bottom: 50px;
+            }
+            
+            .qualification-item span {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero h2 {
+                font-size: 1.6rem;
+            }
+            
+            .lawyer-photo {
+                width: 220px;
+            }
+            
+            .logo h1 {
+                font-size: 1.3rem;
+            }
+            
+            .logo span {
+                font-size: 0.7rem;
+            }
+            
+            .btn {
+                padding: 10px 25px;
+                font-size: 0.9rem;
+            }
+            
+            .specialty-card ul li {
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -1013,6 +1173,13 @@
 
         mobileMenu.addEventListener('click', function() {
             navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+            });
         });
 
         // Smooth scrolling for anchor links
