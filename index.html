@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سعید اشرفی وکیل دادگستری | متخصص دعاوی حقوقی ، کیفری و خانواده | وکیل پایه یک دادگستری</title>
+    <title>سعید اشرفی وکیل دادگستری | متخصص دعاوی کیفری و خانواده | وکیل پایه یک دادگستری</title>
     <meta name="description" content="وکیل  دادگستری سعید اشرفی، وکیل متخصص دعاوی کیفری و خانواده با سال‌ها تجربه در زمینه حقوق کیفری و جرم شناسی. مشاوره حقوقی تخصصی توسط وکیل مجرب سعید اشرفی.">
     <meta name="keywords" content="سعید اشرفی, وکیل سعید اشرفی, وکیل دادگستری, وکیل کیفری, وکیل خانواده, مشاوره حقوقی, دعاوی کیفری, دعاوی خانواده, وکیل پایه یک">
     <link rel="canonical" href="https://saeid-ashrafi-com.github.io/home/">
@@ -273,12 +273,12 @@
         .about-content {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 60px;
+            justify-content: center;
+            text-align: center;
         }
 
         .about-text {
-            flex: 1;
+            max-width: 900px;
         }
 
         .about-text h3 {
@@ -292,60 +292,37 @@
             margin-bottom: 25px;
             font-size: 1.1rem;
             color: #000000;
+            line-height: 1.8;
         }
 
         .qualifications {
             margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .qualification-item {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             margin-bottom: 20px;
+            background: rgba(10, 26, 53, 0.03);
+            padding: 15px 25px;
+            border-radius: 8px;
+            min-width: 300px;
+            justify-content: center;
         }
 
         .qualification-item i {
             color: var(--gold);
             font-size: 1.2rem;
             margin-left: 15px;
-            margin-top: 5px;
         }
 
         .qualification-item span {
             font-weight: 500;
             color: #000000;
-        }
-
-        .about-images {
-            flex: 1;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .image-card {
-            height: 280px;
-            border-radius: 12px;
-            overflow: hidden;
-            position: relative;
-            box-shadow: var(--shadow);
-            transition: all 0.5s ease;
-        }
-
-        .image-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .image-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.8s ease;
-        }
-
-        .image-card:hover img {
-            transform: scale(1.1);
         }
 
         /* Specialties Section */
@@ -453,87 +430,6 @@
             position: absolute;
             right: 0;
             font-size: 1.2rem;
-        }
-
-        /* Estate Services Section */
-        .estate-services {
-            padding: 120px 0;
-            background-color: var(--white);
-        }
-
-        .estate-services .section-title h2 {
-            color: #000000;
-        }
-
-        .estate-services .section-title p {
-            color: #000000;
-        }
-
-        .estate-card {
-            background: linear-gradient(135deg, rgba(10, 26, 53, 0.03) 0%, rgba(26, 43, 74, 0.02) 100%);
-            padding: 50px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .estate-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .estate-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 25px;
-            color: var(--navy);
-            display: flex;
-            align-items: center;
-            font-weight: 600;
-        }
-
-        .estate-card h3 i {
-            margin-left: 15px;
-            font-size: 1.5rem;
-            color: var(--gold);
-        }
-
-        .estate-card ul {
-            list-style: none;
-            columns: 3;
-            column-gap: 40px;
-        }
-
-        .estate-card ul li {
-            margin-bottom: 15px;
-            position: relative;
-            padding-right: 20px;
-            break-inside: avoid;
-            color: #000000;
-            font-size: 1.1rem;
-        }
-
-        .estate-card ul li::before {
-            content: '•';
-            color: var(--gold);
-            position: absolute;
-            right: 0;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .estate-description {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #000000;
-            margin-bottom: 50px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.8;
-            font-weight: 500;
         }
 
         /* Contact Section */
@@ -765,10 +661,6 @@
                 columns: 1;
             }
             
-            .estate-card ul {
-                columns: 2;
-            }
-            
             .lawyer-photo {
                 width: 350px;
                 height: auto;
@@ -804,8 +696,15 @@
                 height: auto;
             }
             
-            .estate-card ul {
-                columns: 2;
+            .qualifications {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .qualification-item {
+                width: 100%;
+                max-width: 400px;
+                min-width: unset;
             }
         }
 
@@ -843,21 +742,13 @@
                 font-size: 2.2rem;
             }
             
-            .about-images {
-                grid-template-columns: 1fr;
+            .specialty-card ul {
+                columns: 1;
             }
             
             .lawyer-photo {
                 width: 280px;
                 height: auto;
-            }
-            
-            .estate-card ul {
-                columns: 1;
-            }
-            
-            .estate-card {
-                padding: 30px;
             }
         }
 
@@ -883,26 +774,9 @@
                 height: auto;
             }
             
-            .estate-card {
-                padding: 25px;
-            }
-            
-            .estate-description {
-                font-size: 1rem;
-            }
-        }
-
-        /* اصلاحات موبایل - اضافه شده */
-        @media (max-width: 768px) {
-            .hero {
-                height: auto;
-                min-height: auto;
-                padding: 100px 0 60px;
-            }
-            
-            .lawyer-photo {
-                width: 220px;
-                height: auto;
+            .qualification-item {
+                padding: 12px 20px;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -923,7 +797,6 @@
                         <li><a href="#home">خانه</a></li>
                         <li><a href="#about">درباره من</a></li>
                         <li><a href="#specialties">حوزه‌های تخصصی</a></li>
-                        <li><a href="#estate">خدمات ملکی</a></li>
                         <li><a href="#contact">تماس با من</a></li>
                     </ul>
                 </nav>
@@ -937,7 +810,7 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h2>سعید اشرفی<br>وکیل دادگستری</h2>
-                    <p>متخصص دعاوی حقوقی ،  کیفری و خانواده | کارشناس ارشد حقوق جزا و جرم شناسی</p>
+                    <p>متخصص دعاوی کیفری و خانواده | کارشناس ارشد حقوق جزا و جرم شناسی</p>
                     <a href="#contact" class="btn">دریافت مشاوره حقوقی</a>
                 </div>
                 <div class="hero-image">
@@ -959,8 +832,8 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>رزومه حرفه‌ای</h3>
-                    <p>سعید اشرفی، وکیل  دادگستری و عضو کانون وکلای دادگستری مرکز با سال‌ها تجربه در زمینه دعاوی حقوقی ، کیفری و دعاوی خانواده.</p>
-                    <p>  دارای مدرک کارشناسی ارشد حقوق جزا و جرم شناسی و متخصص در زمینه دعاوی پیچیده کیفری و خانوادگی.</p>
+                    <p>سعید اشرفی، وکیل  دادگستری و عضو کانون وکلای دادگستری مرکز با سال‌ها تجربه در زمینه حقوق کیفری و دعاوی خانواده.</p>
+                    <p>دارای مدرک کارشناسی ارشد حقوق جزا و جرم شناسی و متخصص در زمینه دعاوی پیچیده کیفری و خانوادگی.</p>
                     <p>با بهره‌گیری از دانش تخصصی و تجربه عملی گسترده، همواره در پی احقاق حقوق موکلین و ارائه بهترین راهکارهای حقوقی بوده‌ام.</p>
                     
                     <div class="qualifications">
@@ -976,14 +849,6 @@
                             <i class="fas fa-briefcase"></i>
                             <span>متخصص دعاوی کیفری و خانواده</span>
                         </div>
-                    </div>
-                </div>
-                <div class="about-images">
-                    <div class="image-card">
-                        <img src="https://raw.githubusercontent.com/Saeid-Ashrafi-com/home/main/unnamed%20(5).jpg" alt="سعید اشرفی - وکیل دادگستری">
-                    </div>
-                    <div class="image-card">
-                        <img src="https://raw.githubusercontent.com/Saeid-Ashrafi-com/home/main/unnamed%20(3).jpg" alt="سعید اشرفی - وکیل متخصص خانواده">
                     </div>
                 </div>
             </div>
@@ -1036,36 +901,6 @@
         </div>
     </section>
 
-    <!-- Estate Services Section -->
-    <section class="estate-services" id="estate">
-        <div class="container">
-            <div class="section-title">
-                <h2>خدمات ملکی</h2>
-                <p>حل تخصصی مشکلات حقوقی و ملکی شما</p>
-            </div>
-            <div class="estate-description">
-                وکیل سعید اشرفی آشنایی کامل با موضاعات حقوقی و ملکی داشته و به صورت تخصصی مشکلات حقوقی و ملکی شما را برطرف می‌کند. خدمات ملکی ایشان شامل موارد زیر است:
-            </div>
-            <div class="estate-card fade-in">
-                <h3><i class="fas fa-landmark"></i> خدمات حقوقی ملکی</h3>
-                <ul>
-                    <li>الزام به تنظیم سند رسمی</li>
-                    <li>تصرف عدوانی</li>
-                    <li>خلع ید</li>
-                    <li>تغییر کاربری اراضی</li>
-                    <li>انعقاد قرارداد در شرکت های تجاری</li>
-                    <li>ورشکستگی</li>
-                    <li>سرقفلی</li>
-                    <li>منابع طبیعی</li>
-                    <li>ثبتی ، کلاهبرداری های ملکی</li>
-                    <li>دعاوی شهرداری</li>
-                    <li>ماده 100 تخریب</li>
-                    <li>و سایر دعاوی ملکی و حقوقی</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
@@ -1076,7 +911,7 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>دریافت مشاوره حقوقی</h3>
-                    <p>برای دریافت مشاوره تخصصی در زمینه دعاوی کیفری، خانوادگی و ملکی، می‌توانید از طریق اطلاعات زیر با من در ارتباط باشید.</p>
+                    <p>برای دریافت مشاوره تخصصی در زمینه دعاوی کیفری و خانوادگی، می‌توانید از طریق اطلاعات زیر با من در ارتباط باشید.</p>
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
@@ -1112,7 +947,6 @@
                                 <option value="">انتخاب کنید</option>
                                 <option value="criminal">دعاوی کیفری</option>
                                 <option value="family">دعاوی خانواده</option>
-                                <option value="estate">خدمات ملکی</option>
                                 <option value="other">سایر موارد</option>
                             </select>
                         </div>
@@ -1134,7 +968,7 @@
                 <div class="footer-info">
                     <div class="footer-logo">سعید اشرفی</div>
                     <p>وکیل دادگستری | عضو کانون وکلای دادگستری مرکز</p>
-                    <p>کارشناس ارشد حقوق جزا و جرم شناسی | متخصص دعاوی کیفری، خانواده و ملکی</p>
+                    <p>کارشناس ارشد حقوق جزا و جرم شناسی | متخصص دعاوی کیفری و خانواده</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-telegram"></i></a>
@@ -1147,7 +981,6 @@
                         <li><a href="#home">خانه</a></li>
                         <li><a href="#about">درباره من</a></li>
                         <li><a href="#specialties">حوزه‌های تخصصی</a></li>
-                        <li><a href="#estate">خدمات ملکی</a></li>
                         <li><a href="#contact">تماس با من</a></li>
                     </ul>
                 </div>
